@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DC7986AC265BF277007FDC04 /* BytePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7986AB265BF277007FDC04 /* BytePalApp.swift */; };
 		DC7986AE265BF277007FDC04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7986AD265BF277007FDC04 /* ContentView.swift */; };
 		DC7986B0265BF278007FDC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7986AF265BF278007FDC04 /* Assets.xcassets */; };
-		DC7986B3265BF278007FDC04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7986B2265BF278007FDC04 /* Preview Assets.xcassets */; };
+		DC7986BC265BF57E007FDC04 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = DC7986BB265BF57E007FDC04 /* OrderedCollections */; };
+		DC7986BE265BF968007FDC04 /* BinaryInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7986BD265BF968007FDC04 /* BinaryInteger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,8 +19,8 @@
 		DC7986AB265BF277007FDC04 /* BytePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BytePalApp.swift; sourceTree = "<group>"; };
 		DC7986AD265BF277007FDC04 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC7986AF265BF278007FDC04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DC7986B2265BF278007FDC04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC7986B4265BF278007FDC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC7986BD265BF968007FDC04 /* BinaryInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryInteger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7986BC265BF57E007FDC04 /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,17 +58,9 @@
 				DC7986AD265BF277007FDC04 /* ContentView.swift */,
 				DC7986AF265BF278007FDC04 /* Assets.xcassets */,
 				DC7986B4265BF278007FDC04 /* Info.plist */,
-				DC7986B1265BF278007FDC04 /* Preview Content */,
+				DC7986BD265BF968007FDC04 /* BinaryInteger.swift */,
 			);
 			path = BytePal;
-			sourceTree = "<group>";
-		};
-		DC7986B1265BF278007FDC04 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				DC7986B2265BF278007FDC04 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +79,9 @@
 			dependencies = (
 			);
 			name = BytePal;
+			packageProductDependencies = (
+				DC7986BB265BF57E007FDC04 /* OrderedCollections */,
+			);
 			productName = BytePal;
 			productReference = DC7986A8265BF277007FDC04 /* BytePal.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +109,9 @@
 				Base,
 			);
 			mainGroup = DC79869F265BF277007FDC04;
+			packageReferences = (
+				DC7986BA265BF57E007FDC04 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = DC7986A9265BF277007FDC04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +126,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC7986B3265BF278007FDC04 /* Preview Assets.xcassets in Resources */,
 				DC7986B0265BF278007FDC04 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7986BE265BF968007FDC04 /* BinaryInteger.swift in Sources */,
 				DC7986AE265BF277007FDC04 /* ContentView.swift in Sources */,
 				DC7986AC265BF277007FDC04 /* BytePalApp.swift in Sources */,
 			);
@@ -268,7 +268,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BytePal/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 777S57PT29;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BytePal/Info.plist;
@@ -290,7 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BytePal/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 777S57PT29;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = BytePal/Info.plist;
@@ -328,6 +328,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC7986BA265BF57E007FDC04 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC7986BB265BF57E007FDC04 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC7986BA265BF57E007FDC04 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC7986A0265BF277007FDC04 /* Project object */;
 }
